@@ -9,8 +9,7 @@ setTimeout(()=>{
 backToHome.addEventListener("click",()=>{
     weatherBox.style.transition="all 1s";
     weatherBox.style.opacity="0%";
-    weatherBox.style.width="0px";
     setTimeout(()=>{
         document.getElementById("form").submit();
-    },2000)
+    },1000)
 })

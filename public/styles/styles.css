@@ -17,6 +17,11 @@ body{
 #homeTitle{
     left: calc(50% - 516px/2);
     top: calc(50% - 127px/2 - 299.5px);
+
+    animation: homeTitle1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-direction: reverse;
 }
 
 .tagLine{
@@ -36,6 +41,25 @@ body{
 #homeTagLine{
     left: calc(50% - 516px/2);
     top: calc(50% - 50px/2 - 188px);
+
+    animation: homeTagLine1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-direction: reverse;
+}
+
+@keyframes homeTitle1 {
+    0%   {left: calc(50% - 516px/2);
+        top: calc(50% - 127px/2 - 299.5px);}
+  100%  {left: calc(50% - 516px/2);
+    top: calc(50% - 74px/2 - 446px);}
+}
+
+@keyframes homeTagLine1 {
+    0%   {left: calc(50% - 516px/2);
+        top: calc(50% - 50px/2 - 188px);}
+  100%  {left: calc(50% - 516px/2);
+    top: calc(50% - 50px/2 - 308px);}
 }
 
 .mainBox{
@@ -44,6 +68,7 @@ body{
     opacity: 70%;
 }
 
+
 #homeBox{
     width: 510px;
     height: 63px;
@@ -51,6 +76,15 @@ body{
     top: calc(50% - 83px/2 - 0.5px);
     display: grid;
     grid-template-columns: 80% 20%;
+
+    animation: homeBox1;
+    animation-duration: 2s;
+    animation-direction: normal;
+}
+
+@keyframes homeBox1{
+    0% {opacity: 0;}
+    100% {opacity: 70%;}
 }
 
 #locationInput{
@@ -81,8 +115,21 @@ body{
 
 #weatherTitle{
     /* Weather Findder */
+    position: absolute;
     left: calc(50% - 516px/2);
     top: calc(50% - 74px/2 - 446px);
+
+    animation: weatherTitle1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-direction: normal;
+}
+
+@keyframes weatherTitle1 {
+    0%   {left: calc(50% - 516px/2);
+        top: calc(50% - 127px/2 - 299.5px);}
+  100%  {left: calc(50% - 516px/2);
+    top: calc(50% - 74px/2 - 446px);}
 }
 
 #weatherTagLine{
@@ -90,13 +137,24 @@ body{
 
     left: calc(50% - 516px/2);
     top: calc(50% - 50px/2 - 308px);
+    animation: weatherTagLine1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-direction: normal;
+}
+
+@keyframes weatherTagLine1 {
+    0%   {left: calc(50% - 516px/2);
+        top: calc(50% - 50px/2 - 188px);}
+  100%  {left: calc(50% - 516px/2);
+    top: calc(50% - 50px/2 - 308px);}
 }
 
 #weatherBox{
     /* Rectangle 1 */
 
     position: absolute;
-    width: 0px;
+    width: 852px;
     height: 587px;
     left: calc(50% - 832px/2);
     top: calc(50% - 617px/2 + 79.5px);
