@@ -30,34 +30,36 @@ app.get("/",(req,res)=>{
 
 app.post("/", async (req,res)=>{
     try {
-        var response = await axios.get("http://api.weatherapi.com/v1/current.json?key="+APIKEY+"&q="+req.body.q+"&aqi=no")
+        var response = await axios.get("http://api.weatherapi.com/v1/current.json?key="+APIKEY+"&q="+req.body.q+"&aqi=no");
+        console.log(response);
+        response = response.data;
+        
+        location= response.location.name;
+        region= response.location.region;
+        country= response.location.country;
+        time= response.current.last_updated.slice(-5);
+        wind_kph= response.current.wind_kph,
+        humidity= response.current.humidity,
+        temp_c= response.current.temp_c,
+        feelslike_c= response.current.feelslike_c,
+        condition_text = response.current.condition.text
+        
+        if(time<"12:00"){
+            label = " AM";
+        }else{
+            label = " PM";
+        }
+
+        if(response.current.is_day == 1){
+            w_img = response.current.condition.icon.slice(-11);
+        } else{
+            w_img = response.current.condition.icon.slice(-13);
+        }
+        res.redirect("/curr_weather");
     } catch (error) {
         console.log(error.message);
+        res.redirect("/");
     }
-    response = response.data;
-
-    location= response.location.name;
-    region= response.location.region;
-    country= response.location.country;
-    time= response.current.last_updated.slice(-5);
-    wind_kph= response.current.wind_kph,
-    humidity= response.current.humidity,
-    temp_c= response.current.temp_c,
-    feelslike_c= response.current.feelslike_c,
-    condition_text = response.current.condition.text
-    
-    if(time<"12:00"){
-        label = " AM";
-    }else{
-        label = " PM";
-    }
-
-    if(response.current.is_day == 1){
-        w_img = response.current.condition.icon.slice(-11);
-    } else{
-        w_img = response.current.condition.icon.slice(-13);
-    }
-    res.redirect("/curr_weather");
 })
 
 app.get("/curr_weather",(req,res)=>{
@@ -76,10 +78,6 @@ app.get("/curr_weather",(req,res)=>{
     });
 })
 
-/*app.post("/", async (req,res)=>{
-    
-    res.redirect("/");
-})*/
 
 app.listen(port,()=>{
     console.log("Server running on port "+port+"...\n link: http://localhost:3000/");

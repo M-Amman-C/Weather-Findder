@@ -96,7 +96,7 @@ body{
     /* Rectangle 1 */
 
     position: absolute;
-    width: 852px;
+    width: 0px;
     height: 587px;
     left: calc(50% - 832px/2);
     top: calc(50% - 617px/2 + 79.5px);
@@ -107,6 +107,8 @@ body{
     font-family: 'Kelly Slab';
     font-size: 34px;
 
+    opacity: 0;
+    transition: all 1s;
 }
 
 
