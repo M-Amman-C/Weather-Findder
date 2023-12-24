@@ -1,0 +1,44 @@
+<%- include('partials/headers.ejs') %>
+<body>
+    <p class="title" id="weatherTitle">Weather Findder</p>
+    <p class="tagLine" id="weatherTagLine">The only weather app you'll ever need</p>
+    <div class="mainBox" id="weatherBox">
+        <div id="top">
+            <p><%= time+label %></p>
+            <div id="locationInfo">
+                <div style="font-size: 42px;"><%= location %></div>
+                    <%= region %>,
+                    <%= country %>
+            </div>
+            <div style="text-align: center;">
+                <img src=<%= w_img %> alt="" id="stateImg">
+                <%= condition_text %>
+            </div>
+        </div>
+        <div>
+            <table class="weatherInfo">
+                <tr>
+                    <td>Wind:</td>
+                    <td class="val"><%= wind_kph %> km/h</td>
+                </tr>
+                <tr>
+                    <td>Humidity:</td>
+                    <td class="val"><%= humidity %></td>
+                </tr>
+                <tr>
+                    <td>Temprature:</td>
+                    <td class="val"><%= temp_c %> C</td>
+                </tr>
+                <tr>
+                    <td>Feels Like:</td>
+                    <td class="val"><%= feelslike_c %> C</td>
+                </tr>
+            </table>
+        </div>
+        <form action="/" method="get">
+            <button type="submit" id="backToHome">Return</button>
+        </form>
+    </div>
+    
+</body>
+</html>

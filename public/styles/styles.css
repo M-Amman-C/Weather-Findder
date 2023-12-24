@@ -1,0 +1,153 @@
+body{
+    background-image: url("../images/Background.jpg");
+    background-position: 0px -200px;
+    background-size: cover;
+}
+
+.title{
+    /* Weather Findder */
+
+    position: absolute;
+    
+    font-family: 'Katibeh';
+    font-size: 93px;
+    color: #FFFFFF;
+}
+
+#homeTitle{
+    left: calc(50% - 516px/2);
+    top: calc(50% - 127px/2 - 299.5px);
+}
+
+.tagLine{
+    /* The only weather app you’ll ever need */
+
+    position: absolute;
+    width: 516px;
+    height: 50px;
+    
+
+    font-family: 'Katibeh';
+    font-size: 42px;
+
+    color: #FFFFFF;
+}
+
+#homeTagLine{
+    left: calc(50% - 516px/2);
+    top: calc(50% - 50px/2 - 188px);
+}
+
+.mainBox{
+    position: absolute;
+    border: none;
+    opacity: 70%;
+}
+
+#homeBox{
+    width: 510px;
+    height: 63px;
+    left: calc(50% - 510px/2 - 3px);
+    top: calc(50% - 83px/2 - 0.5px);
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+#locationInput{
+    /* Rectangle 1 */
+    border: none;
+    opacity: 70%;
+    /* Text */
+
+    
+    font-family: 'Kelly Slab';
+    font-size: 42px;
+    color: #424242;
+    outline: none;
+}
+
+
+#mainBtn{
+    border: none;
+    opacity: 78%;
+    width: 70px;
+    background-image: url("../Icons/map.png");
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*------------------------Weather Page--------------------------*/
+
+#weatherTitle{
+    /* Weather Findder */
+    left: calc(50% - 516px/2);
+    top: calc(50% - 74px/2 - 446px);
+}
+
+#weatherTagLine{
+    /* The only weather app you’ll ever need */
+
+    left: calc(50% - 516px/2);
+    top: calc(50% - 50px/2 - 308px);
+}
+
+#weatherBox{
+    /* Rectangle 1 */
+
+    position: absolute;
+    width: 852px;
+    height: 587px;
+    left: calc(50% - 832px/2);
+    top: calc(50% - 617px/2 + 79.5px);
+    padding: 20px 20px 0px 20px;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    font-family: 'Kelly Slab';
+    font-size: 34px;
+
+}
+
+
+#backToHome{
+    /* Rectangle 2 */
+
+    position: absolute;
+    width: 317px;
+    height: 83px;
+    left: calc(50% - 317px/2 + 0.5px);
+    top: calc(50% - 83px/2 + 232.5px);
+
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+
+    /* Text */
+
+    font-family: 'Kelly Slab';
+    font-size: 42px;
+
+    color: #424242;
+}
+
+#top{
+    display: grid;
+    grid-template-columns: 20% 65% 15%;
+}
+
+#locationInfo{
+    text-align: center;
+}
+
+#stateImg{
+    width: 70px;
+    height: 70px;
+}
+
+td{
+    padding-top: 30px;
+}
+
+.val{
+    padding-left: 100px;
+}
