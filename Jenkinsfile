@@ -4,7 +4,7 @@
     VALUE = 2
   }
   stages {
-    stage("build"){
+    stage ("build"){
       steps{
         nodejs('Node-23-2-0'){
             sh 'pm2 stop index || echo "not running"'
@@ -14,7 +14,7 @@
       }
     }
 
-   stage{
+   stage ("installing node"){
     steps{
      // Install Node.js
      sh '''
