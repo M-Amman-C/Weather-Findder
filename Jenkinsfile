@@ -1,15 +1,21 @@
 pipeline{
   agent any
+  envirinment{
+    VALUE = 2
+  }
   stages {
     stage("build"){
       steps{
         echo 'building........'
+        sh 'echo '
       }
     }
     
     stage("test"){
       steps{
         echo 'testing........'
+        sh "The value is ${VALUE}"
+        sh 'pwd'
       }
     }
 
