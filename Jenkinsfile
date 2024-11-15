@@ -6,6 +6,9 @@
   stages {
     stage("build"){
       steps{
+        nodejs('Node-23-2-0'){
+            sh 'pm2 stop index || echo "not running"'
+        }
         echo 'building........'
         sh 'echo '
       }
@@ -19,7 +22,7 @@
          sh 'npm install'
          sh 'npm install -g pm2'
          sh 'pm2 start index.js'
-         sh 'pm2 [list|ls|status]'
+         sh 'pm2 list index'
         }
       }
     }
