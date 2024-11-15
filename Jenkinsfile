@@ -15,7 +15,7 @@
       steps{
         echo 'testing........'
         echo "The value is ${VALUE}"
-        sh 'pwd'
+        sh 'npm install'
       }
     }
 
