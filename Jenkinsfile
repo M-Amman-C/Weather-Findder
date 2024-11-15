@@ -1,6 +1,6 @@
 pipeline{
   agent any
-  envirinment{
+  environment{
     VALUE = 2
   }
   stages {
