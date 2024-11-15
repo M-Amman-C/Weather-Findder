@@ -15,7 +15,9 @@
       steps{
         echo 'testing........'
         echo "The value is ${VALUE}"
-        sh 'npm install'
+        nodejs('Node-23-2-0'){
+         sh 'npm install'
+        }
       }
     }
 
