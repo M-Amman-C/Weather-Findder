@@ -13,6 +13,16 @@
         sh 'echo '
       }
     }
+
+   stage{
+    steps{
+     // Install Node.js
+     sh '''
+     curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+     sudo apt install -y nodejs
+     '''
+    }
+   }
     
     stage("test"){
       steps{
