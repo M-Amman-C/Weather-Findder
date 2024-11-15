@@ -1,4 +1,4 @@
-pipeline{
+ pipeline{
   agent any
   environment{
     VALUE = 2
@@ -14,7 +14,7 @@ pipeline{
     stage("test"){
       steps{
         echo 'testing........'
-        sh "The value is ${VALUE}"
+        echo "The value is ${VALUE}"
         sh 'pwd'
       }
     }
