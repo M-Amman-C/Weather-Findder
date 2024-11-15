@@ -17,7 +17,9 @@
         echo "The value is ${VALUE}"
         nodejs('Node-23-2-0'){
          sh 'npm install'
-         sh 'node index.js'
+         sh 'npm install -g pm2'
+         sh 'pm2 start index.js'
+         sh 'pm2 [list|ls|status]'
         }
       }
     }
