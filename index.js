@@ -79,7 +79,7 @@ app.get("/curr_weather",(req,res)=>{
 })
 
 
-app.listen(port,()=>{
+app.listen(3000,()=>{
     console.log("Server running on port "+port+"...\n link: http://localhost:3000/");
 })
 
